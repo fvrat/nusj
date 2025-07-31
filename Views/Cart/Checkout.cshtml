@@ -1,0 +1,19 @@
+@{
+    ViewData["Title"] = "إتمام الحجز";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">إتمام الحجز</h2>
+
+    <form asp-action="ConfirmCheckout" method="post" class="w-50 mx-auto">
+        <div class="mb-3">
+            <label for="name" class="form-label">الاسم الكامل</label>
+            <input type="text" class="form-control" name="name" required />
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">البريد الإلكتروني</label>
+            <input type="email" class="form-control" name="email" required />
+        </div>
+        <button type="submit" class="btn btn-primary w-100">تأكيد الحجز</button>
+    </form>
+</div>

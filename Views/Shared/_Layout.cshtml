@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - نسج</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .navbar-custom {
+            background-color: rgba(120, 70, 40, 0.7); /* بني شفاف */
+        }
+
+        .navbar-brand img {
+            height: 70px;
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-weight: bold;
+        }
+
+        .container-body {
+            padding-top: 100px; /* عشان الشريط ثابت */
+        }
+
+            .hero-banner {
+        background: url('/images/hero-banner.jpg') no-repeat center center/cover;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+    }
+
+    .hero-overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-custom shadow-sm">
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- روابط التنقل -->
+<!-- روابط التنقل -->
+<ul class="navbar-nav">
+    <li class="nav-item">
+        <a class="nav-link" href="/">الرئيسية</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/#courses">دوراتنا</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/#contact">تواصل معنا</a>
+    </li>
+</ul>
+
+<!-- اللوقو -->
+<a class="navbar-brand mx-auto" href="/">
+    <img src="/images/logo.png" alt="شعار نسج" style="height: 90px;">
+</a>
+
+
+        </div>
+    </nav>
+
+    <!-- محتوى الصفحة -->
+    <div class="container-body">
+        @RenderBody()
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

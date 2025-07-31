@@ -1,0 +1,57 @@
+@model IEnumerable<CraftCourses.Models.Course>
+
+@{
+    ViewData["Title"] = "الدورات";
+}
+
+<style>
+    body {
+        background-color: #fdfaf6;
+    }
+
+    .card-custom {
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .card-custom:hover {
+        transform: scale(1.02);
+    }
+
+    .btn-nasij {
+        background-color: #7d5a50;
+        color: white;
+        font-weight: bold;
+        border-radius: 12px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-nasij:hover {
+        background-color: #5a3f38;
+        color: #fff;
+    }
+</style>
+
+<div class="row">
+    @foreach (var course in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 card-custom border-0">
+                <img src="@course.ImageUrl" class="card-img-top" style="height: 220px; object-fit: cover; border-top-left-radius: 20px; border-top-right-radius: 20px;" alt="@course.Title" />
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">@course.Title</h5>
+                    <p class="card-text text-muted" style="font-size: 0.9rem;">@course.Description</p>
+                    <p class="mb-1"><strong>المدرّبة:</strong> @course.Instructor</p>
+                    <p class="mb-1"><strong>التصنيف:</strong> @course.Category</p>
+                    <p class="mb-3"><strong>السعر:</strong> @course.Price ريال</p>
+
+                    <a class="btn btn-sm w-100 btn-nasij"
+                       href="/Cart/AddToCart?id=@course.Id&title=@course.Title&price=@course.Price">
+                       ابدأ رحلتك الحرفية
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
