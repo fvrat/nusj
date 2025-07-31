@@ -4,6 +4,7 @@
 
 ##  فكرة المشروع
 منصة تهدف إلى تمكين المجتمع المهاري المحلي عبر تقديم دورات تعليمية في الحرف اليدوية مثل الكروشيه، التطريز، وصناعة الإكسسوارات. المنصة تُظهر جميع الدورات المتاحة، وتتيح للمستخدم حجز مقعد في الدورة، وإضافة أكثر من دورة إلى سلة الحجز.
+اللوقو: <img width="500" height="500" alt="logo" src="https://github.com/user-attachments/assets/5063d5ba-255e-47a2-9e60-56946fdaf343" />
 
 <img width="1901" height="868" alt="Screenshot 2025-07-31 063852" src="https://github.com/user-attachments/assets/f33b60c8-ce57-4082-874e-d04585f9410b" />
 <img width="1898" height="864" alt="Screenshot 2025-07-31 063915" src="https://github.com/user-attachments/assets/90a6c623-3b1f-4e60-9588-49ee8f4808d6" />
